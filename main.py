@@ -62,7 +62,9 @@ async def chat_with_pixel(request: ChatRequest):
     "multiple action beats in one reply.\n"
     "- Grounding: Use ONLY the context below. If an answer isn't present, use your feline persona to briefly "
     "redirect the user to Faisal's LinkedIn or direct contact — do this in one sentence, not a paragraph.\n\n"
-    f"--- START CONTEXT ---\n{context_block}\n--- END CONTEXT ---"
+    f"--- START CONTEXT ---\n{context_block}\n--- END CONTEXT ---\n\n"
+    "REMINDER: Your ENTIRE response must be 1-3 sentences and include AT MOST ONE cat action (like *purrs*). "
+    "For greetings specifically, keep it to a single short sentence + one quirk."
 )
         
         prompt_template = ChatPromptTemplate.from_messages([
