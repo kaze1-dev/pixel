@@ -38,7 +38,6 @@ vector_store = PGVectorStore.create_sync(
 llm = ChatGroq(
     temperature=0.6,
     model_name="openai/gpt-oss-20b",
-    max_tokens=120,
     groq_api_key=os.getenv("GROQ_API_KEY")
 )
 
