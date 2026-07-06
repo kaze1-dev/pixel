@@ -26,12 +26,13 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 engine = PGEngine.from_connection_string(url=os.getenv("DATABASE_URL"))
 vector_store = PGVectorStore.create_sync(
     engine=engine,
     table_name="pixel_cat_knowledge",
-    embedding_service=embeddings
+    embedding_service=embeddings,
 )
 
 llm = ChatGroq(
