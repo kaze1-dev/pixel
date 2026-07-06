@@ -2,7 +2,7 @@
 title: Pixel
 emoji: 🐈
 colorFrom: purple
-colorTo: violet
+colorTo: purple
 sdk: docker
 app_port: 7860
 pinned: false
